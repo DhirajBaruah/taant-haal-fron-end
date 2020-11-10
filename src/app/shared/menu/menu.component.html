@@ -1,0 +1,17 @@
+<nav>
+    <div class="logo">
+        <h4>Taant-Haal</h4>
+    </div>
+    
+    <ul class="nav-links" [ngClass]="{'side-nav-active' : sideMenuToggle}">        
+        <li  *ngFor="let link of menuLinks" [@openClose]="!sideMenuToggle ? 'open' : 'closed'">
+            <a>{{link.name}}</a>
+        </li>
+    </ul>
+
+    <div class="burger" (click)="onclickBurger()">
+        <div class="line1" [@hamburger-line1]="!sideMenuToggle ? 'closed' : 'open'"></div>
+        <div class="line2" [@hamburger-line2]="!sideMenuToggle ? 'closed' : 'open'"></div>
+        <div class="line3" [@hamburger-line3]="!sideMenuToggle ? 'closed' : 'open'"></div>
+    </div>
+</nav>
