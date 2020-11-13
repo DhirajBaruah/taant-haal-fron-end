@@ -4,8 +4,8 @@
     </div>
     
     <ul class="nav-links" [ngClass]="{'side-nav-active' : sideMenuToggle}">        
-        <li  *ngFor="let link of menuLinks" [@openClose]="!sideMenuToggle ? 'open' : 'closed'">
-            <a>{{link.name}}</a>
+        <li  *ngFor="let link of menuLinks" [@openClose]="!sideMenuToggle ? 'open' : 'closed'" >
+            <a >{{link.name}} </a>
         </li>
     </ul>
 
